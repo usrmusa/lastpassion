@@ -2,19 +2,159 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added viewport meta tag -->
-    <title>Last Passion</title>
-    <link rel="stylesheet" href="styles.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Last Passion – Coming Soon</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --digilayn-green: #6ddf4f;
+            --overlay: rgba(255, 255, 255, 0.9);
+            --text-dark: #1a1a1a;
+            --text-muted: #666666;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, sans-serif;
+            /* Background image integration */
+            background: url('img/background-white.jpg') no-repeat center center fixed;
+            background-size: cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            padding: 20px;
+            color: var(--text-dark);
+            user-select: none;
+        }
+
+        .container {
+            max-width: 420px;
+            width: 100%;
+            background: var(--overlay);
+            backdrop-filter: blur(8px);
+            -webkit-backdrop-filter: blur(8px);
+            padding: 60px 30px;
+            border-radius: 24px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.5);
+        }
+
+        .brand-name {
+            font-size: 10px;
+            text-transform: uppercase;
+            letter-spacing: 6px;
+            color: #888;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+
+        .status-pill {
+            display: inline-block;
+            border: 1.5px solid var(--digilayn-green);
+            color: var(--digilayn-green);
+            padding: 4px 12px;
+            border-radius: 50px;
+            font-size: 11px;
+            font-weight: 800;
+            margin-bottom: 25px;
+            letter-spacing: 1px;
+        }
+
+        h1 {
+            font-size: 26px;
+            margin-bottom: 15px;
+            font-weight: 700;
+            color: #000;
+        }
+
+        p {
+            color: var(--text-muted);
+            line-height: 1.6;
+            margin-bottom: 40px;
+            font-size: 15px;
+        }
+
+        .btn-whatsapp {
+            display: block;
+            background: #000;
+            color: #fff;
+            text-decoration: none;
+            padding: 16px 20px;
+            border-radius: 12px;
+            font-weight: 600;
+            font-size: 15px;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            margin-bottom: 30px;
+        }
+
+        .btn-whatsapp:hover {
+            background: var(--digilayn-green);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px rgba(109, 223, 79, 0.3);
+        }
+
+        /* Fine Print Footer */
+        .fine-print {
+            font-size: 10px;
+            color: #bbb;
+            letter-spacing: 0.5px;
+            text-transform: uppercase;
+        }
+
+        .fine-print a {
+            color: #aaa;
+            text-decoration: none;
+            font-weight: 700;
+            transition: color 0.2s;
+        }
+
+        .fine-print a:hover {
+            color: var(--digilayn-green);
+        }
+
+        @media (max-width: 480px) {
+            .container { padding: 45px 20px; }
+            h1 { font-size: 22px; }
+        }
+    </style>
 </head>
 <body>
-<article>
-    <h1>We&rsquo;ll be back soon!</h1>
-    <div>
-        <p>Sorry for the inconvenience but we&rsquo;re performing some maintenance at the moment. If you need to you can
-            always <a href="https://wa.me/27699671746">WhatsApp us</a>, otherwise we&rsquo;ll be back online shortly!
-        </p>
-        <p><em>&mdash; DigiLayn</em></p>
+
+<div class="container">
+    <div class="brand-name">Last Passion</div>
+    <div class="status-pill">UPGRADING</div>
+
+    <h1>Back Online Shortly</h1>
+
+    <p>
+        We are performing scheduled maintenance to enhance your experience. Contact us directly for urgent orders.
+    </p>
+
+    <a href="https://wa.me/27699671746" class="btn-whatsapp">
+        WhatsApp Support
+    </a>
+
+    <div class="fine-print">
+        Digital Architecture by <a href="https://digilayn.co.za">Digilayn Studio</a>
     </div>
-</article>
+</div>
+
+<script>
+    // Security: Disable right click & copy
+    document.addEventListener("contextmenu", e => e.preventDefault());
+    document.addEventListener("copy", e => e.preventDefault());
+</script>
+
 </body>
 </html>
